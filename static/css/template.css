@@ -1,0 +1,59 @@
+/* https://coolors.co/040f0f-248232-2ba84a-2d3a3a-fcfffc */
+* {
+    font-family: "Roboto Mono";
+    margin: 0;
+    padding: 0;
+    background-color: #2D3A3A;
+}
+
+h1 {
+    color: #FCFFFC;
+}
+
+#logintitle {
+    margin-bottom: 10%;
+    font-size: 3em;
+}
+
+#vcenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: auto;
+    width: 25%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+#loginField {
+    color: #FCFFFC;
+    font-size: larger;
+    font-style: italic;
+}
+
+#login input[type=email],
+#login input[type=password] {
+	background: transparent;
+    margin-bottom: 5%;
+    color: #2BA84A;
+	border: none;
+	border-bottom: 1px solid #FCFFFC;
+	width: 100%;
+	outline: none;
+	padding: 0px 0px 0px 0px;
+	font-style: italic;
+    font-size: larger;
+}
+
+#login input[type=submit],
+#login input[type=button]{
+    float:right;
+	border: none;
+    padding: 10px;
+	color: #FCFFFC;
+    font-size: larger;
+}
+#login input[type=submit]:hover,
+#login input[type=button]:hover{
+    background: #2BA84A;
+}

@@ -1,0 +1,15 @@
+{% extends "template.html" %}
+{% block title %} Login {% endblock %}
+{% block content %}
+<header>
+    <div id="vcenter">
+      <div id="container">
+        <h1 id="logintitle">CLIry</h1>
+      </div>
+      <form id="login" action="{{  url_for('login') }}" method="post">
+        <p id="loginField">EMAIL:</p><input type="email" name="username" required="true">
+        <p id="loginField">PASSWORD:</p><input type="password" name="passwordname" required="true">
+        <input type="submit" value="LOG IN">
+      </form>
+  </header>
+{% endblock %}
