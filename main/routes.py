@@ -1,12 +1,8 @@
-from flask import Flask, render_template, flash, redirect, url_for
-from flask_sqlalchemy import SQLAlchemy
-from forms import SignupForm, LoginForm
+from flask import render_template, flash, redirect, url_for
+from main.forms import SignupForm, LoginForm
+from main import app, db, bcrypt
+from main.models import User, Post
 
-app = Flask(__name__)
-app.config["SECRET_KEY"] = "xwGG4jCKydJgdWcCY1KxBx7ub2xhUu6g"
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///site.db"
-app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = "False"
-db = SQLAlchemy(app)
 
 @app.route("/")
 def index():
@@ -26,7 +22,7 @@ def login():
 def signup():
     form = SignupForm()
     if form.validate_on_submit():
-        flash(f"Account {form.username.data} created.", "success")
+        flash(f"Account {form.username.data} created. Log in.", "success")
         return redirect(url_for("login"))
 
     return render_template("signup.html", form=form)
