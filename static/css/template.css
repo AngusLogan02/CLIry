@@ -10,9 +10,25 @@ h1 {
     color: #FCFFFC;
 }
 
-#logintitle {
-    margin-bottom: 10%;
+h2 {
+    color: #7b837b;
+    font-size: 1.3em;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+a {
+    color: #2BA84A;
+    text-decoration: none;
+}
+
+a:hover {
+    font-style: italic;
+}
+
+#title {
     font-size: 3em;
+    margin-bottom: 10%;
 }
 
 #vcenter {
