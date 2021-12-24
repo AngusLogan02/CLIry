@@ -68,6 +68,7 @@ a:hover {
     padding: 10px;
 	color: #FCFFFC;
     font-size: larger;
+    cursor: pointer;
 }
 #login input[type=submit]:hover,
 #login input[type=button]:hover{
@@ -81,6 +82,7 @@ button {
 	color: #FCFFFC;
     font-size: larger;
     margin-right: 3%;
+    cursor: pointer;
 }
 
 button:hover {
