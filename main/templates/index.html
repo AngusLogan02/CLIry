@@ -1,5 +1,6 @@
 {% extends "template.html" %}
 {% block title %} Your diary {% endblock %}
 {% block content %}
-<h1>Welcome, Angus!</h1>
+<h1>Welcome, {{ current_user.username }}!</h1>
+<a href="{{ url_for('logout') }}"><h2>Log out</h2></a>
 {% endblock %}
