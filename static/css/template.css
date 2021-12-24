@@ -14,7 +14,6 @@ h2 {
     color: #7b837b;
     font-size: 1.3em;
     margin-bottom: 5%;
-    text-align: center;
 }
 
 a {
@@ -28,7 +27,7 @@ a:hover {
 
 #title {
     font-size: 3em;
-    margin-bottom: 10%;
+    margin-bottom: 1%;
 }
 
 #vcenter {
@@ -71,5 +70,18 @@ a:hover {
 }
 #login input[type=submit]:hover,
 #login input[type=button]:hover{
+    background: #2BA84A;
+}
+
+button {
+    float:right;
+	border: none;
+    padding: 10px;
+	color: #FCFFFC;
+    font-size: larger;
+    margin-right: 3%;
+}
+
+button:hover {
     background: #2BA84A;
 }

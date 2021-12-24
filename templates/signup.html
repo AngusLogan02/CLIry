@@ -1,17 +1,17 @@
 {% extends "template.html" %}
-{% block title %} Login {% endblock %}
+{% block title %} Sign Up {% endblock %}
 {% block content %}
 <header>
     <div id="vcenter">
       <div id="container">
         <h1 id="title">CLIry</h1>
-        <h2>Login</h2>
+        <h2>Signup</h2>
       </div>
-      <form id="login" action="{{  url_for('login') }}" method="post">
+      <form id="login" action="{{  url_for('signup') }}" method="post">
         <p id="loginField">EMAIL:</p><input type="email" name="username" required="true">
         <p id="loginField">PASSWORD:</p><input type="password" name="password" required="true">
-        <input type="submit" value="LOG IN">
+        <input type="submit" value="SIGN UP">
       </form>
-      <a href="{{ url_for('signup') }}"><button>SIGN UP</button></a>
+      <a href="{{ url_for('login') }}"><button>LOG IN</button></a>
   </header>
 {% endblock %}
