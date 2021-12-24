@@ -1,5 +1,5 @@
 {% extends "template.html" %}
-{% block title %} Sign Up {% endblock %}
+{% block title %} Signup {% endblock %}
 {% block content %}
 <header>
     <div id="vcenter">
@@ -7,10 +7,50 @@
         <h1 id="title">CLIry</h1>
         <h2>Signup</h2>
       </div>
-      <form id="login" action="{{  url_for('signup') }}" method="post">
-        <p id="loginField">EMAIL:</p><input type="email" name="username" required="true">
-        <p id="loginField">PASSWORD:</p><input type="password" name="password" required="true">
-        <input type="submit" value="SIGN UP">
+      <form id="login" action="" method="POST">
+        {{ form.hidden_tag() }}
+
+        {{ form.username.label(id="label") }}
+        {% if form.username.errors %}
+            <div id="invalid-feedback">
+                {% for error in form.username.errors %}
+                    <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+        {% endif %}
+        {{ form.username() }}
+
+        {{ form.email.label(id="label") }}
+        {% if form.email.errors %}
+            <div id="invalid-feedback">
+                {% for error in form.email.errors %}
+                    <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+        {% endif %}
+        {{ form.email() }}
+
+        {{ form.password.label(id="label") }}
+        {% if form.password.errors %}
+            <div id="invalid-feedback">
+                {% for error in form.password.errors %}
+                    <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+        {% endif %}
+        {{ form.password() }}
+
+        {{ form.confirm_password.label(id="label") }}
+        {% if form.confirm_password.errors %}
+            <div id="invalid-feedback">
+                {% for error in form.confirm_password.errors %}
+                    <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+        {% endif %}
+        {{ form.confirm_password() }}
+
+        {{ form.submit() }}
       </form>
       <a href="{{ url_for('login') }}"><button>LOG IN</button></a>
   </header>
